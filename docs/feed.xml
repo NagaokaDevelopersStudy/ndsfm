@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+
+    <title>NDS FM </title>
+    <link>https://NagaokaDevelopersStudy.github.io/ndsfm</link>
+    <description>NDS の人々が語らうラジオ番組です</description>
+    <language>JA</language>
+    <image>
+      <url>https://NagaokaDevelopersStudy.github.io/ndsfm/artwork.png</url>
+    </image>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:category text="Games &amp; Hobbies"/>
+
+    <item>
+      <pubDate>2018-07-21</pubDate>
+      <enclosure url="https://storage.googleapis.com/ndsfm/ndsfm_01.mp3" length="23.19MB" type="audio/mp3" />
+      <title>NDS第56回勉強会振り返り</title>
+      <description>@civic さんをゲストに迎えて7月7日に開催された第56回勉強会の振り返りを行いました。</description>
+      <itunes:summary>@civic さんをゲストに迎えて7月7日に開催された第56回勉強会の振り返りを行いました</itunes:summary>
+      <itunes:duration>00:50:39</itunes:duration>
+    </item>
+
+  </channel>
+</rss>
+
