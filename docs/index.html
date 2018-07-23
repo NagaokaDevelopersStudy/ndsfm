@@ -1,14 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>NDS FM</title>
-</head>
-<body>
-  <h1>NDS FM</h1>
+---
+layout: default
+---
 
-  長岡開発者勉強会 (<a href="http://nagaoka.techtalk.jp">http://nagaoka.techtalk.jp</a>) のポッドキャストです。
-  @dictav が NDS に関わりのゲストを迎えて話を聞きます。
-  
-</body>
-</html>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+
+<header>
+  <div class="content">
+    <h1>NDS FM
+      <a href=""><img class="feed" src="/img/podcast_feed.png" alt="Podcast Internet radio Episode Overcast - radio @kisspng"></a>
+        <!-- <img src="https://banner2.kisspng.com/20180615/ako/kisspng-podcast-internet-radio-episode-overcast-podcast-5b2452f8c8da27.9734281915291071928227.jpg" alt="Podcast Internet radio Episode Overcast - radio @kisspng"> -->
+    </h1>
+    
+    長岡開発者勉強会 (<a href="//nagaoka.techtalk.jp">https://nagaoka.techtalk.jp</a>) のポッドキャストです。
+    <a href="//twitter/dictav">@dictav</a> が NDS に関わりのある方をゲストにお迎えしてお話を聞きます。
+  </div>
+</header>
+
+<div class="content">
+  <div class="top_message">
+    楽しんでいただけたら、または興味のありそうな人をご存知でしたらシェアしていただけるとうれしいです。
+    お便りもお待ちしております。
+    <a href="//twitter.com/search?q=%23ndsfm&f=tweets"><img class="twitter" src="/img/twitter.png">#ndsfm</a>
+    、または
+    <a href="//discord.gg/TvAWxWq"><img class="discord" src="/img/discord.png" alt="discord"></a>までお寄せください。
+  </div>
+
+  <ul class="podcasts">
+  {% for p in site.posts %}
+      <li>
+        <div class="date">
+          {{ p.date | date: "%Y-%m-%d" }}
+        </div>
+        <h3 class="title">
+          <a href="{{ p.url }}">#{{ p.title }}. {{ p.subject }}</a>
+        </h3>
+        <div class="guest">
+          ゲスト: <a href="{{ p.guest.url }}">{{ p.guest.name }}</a>
+        </div>
+        <div>
+          {{ p.summary }}
+        </div>
+      </li>
+  {% endfor %}
+  </ul>
+</div>
