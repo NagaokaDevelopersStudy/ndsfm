@@ -20,7 +20,7 @@ header h2 {
 header .content {
 	padding-left: 80px;
 	min-height: 100px;
-  background-image: url(./img/ndsfm_logo.png);
+  background-image: url(/img/ndsfm_logo.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: auto 80px;
