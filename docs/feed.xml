@@ -1,25 +1,51 @@
+---
+---
+
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 
-    <title>NDS FM </title>
-    <link>https://NagaokaDevelopersStudy.github.io/ndsfm</link>
-    <description>NDS の人々が語らうラジオ番組です</description>
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}{{ site.baseurl }}</link>
+    <description>{{ site.description }}</description>
     <language>JA</language>
     <image>
-      <url>https://NagaokaDevelopersStudy.github.io/ndsfm/artwork.png</url>
+      <url>{{ site.url }}{{ site.baseurl }}/artwork.png</url>
     </image>
     <itunes:explicit>no</itunes:explicit>
     <itunes:category text="Games &amp; Hobbies"/>
 
+    {% for p in site.posts %}
     <item>
-      <pubDate>2018-07-21</pubDate>
-      <enclosure url="https://storage.googleapis.com/ndsfm/ndsfm_01.mp3" length="23.19MB" type="audio/mp3" />
-      <title>NDS第56回勉強会振り返り</title>
-      <description>@civic さんをゲストに迎えて7月7日に開催された第56回勉強会の振り返りを行いました。</description>
-      <itunes:summary>@civic さんをゲストに迎えて7月7日に開催された第56回勉強会の振り返りを行いました</itunes:summary>
-      <itunes:duration>00:50:39</itunes:duration>
+      <pubDate>{{ p.date | date: '%Y-%m-%d' }}</pubDate>
+      <enclosure url="https://storage.googleapis.com/ndsfm/ndsfm_{{ p.title }}.mp3" length="{{ p.audio.length }}" type="audio/mp3" />
+      <title>{{ p.subject }}</title>
+      <description><![CDATA[
+  <section class="description">
+    {{ page.description }}
+  </section>
+  <section class="refs">
+    <h4>参照</h4>
+    <ul>
+    {% for r in page.refs %}
+    <li>
+      {% if r.url %}
+        <a href="{{ r.url }}" target="_blank">{{ r.title }}</a>
+      {% else %}
+        {{ r.title }}
+      {% endif %}
+      {% if r.author %}
+        by {{ r.author.name }}
+      {% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+  </section>
+  ]]></description>
+      <itunes:summary>{{ p.summary }}</itunes:summary>
+      <itunes:duration>{{ p.audio.duration }}</itunes:duration>
     </item>
+    {% endfor %}
 
   </channel>
 </rss>
