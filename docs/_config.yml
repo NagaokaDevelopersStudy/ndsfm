@@ -1,0 +1,25 @@
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+title: "NDS FM"
+description: "NDS 界隈の人々が語らうポッドキャストです"
+#permalink: ""
+#relative_permalinks: false
+#url: https://www.m0mentum.co.jp
+
+# jekyll-seo-tag
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+logo: "/artwork.png"
+
+facebook:
+  publisher: nagaoka.dev.study
+
+twitter:
+  username: nagaoka_study
+  card: summary
+
+#analytics_account: ""
+#google_site_verification: googleXXXXXXXXXXXXXXXX.html
+
+
