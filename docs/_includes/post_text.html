@@ -1,0 +1,26 @@
+<section class="description">
+  {{ include.post.description }}
+</section>
+  
+<section class="refs">
+  <h4>参照</h4>
+  <ul>
+  {% for r in include.post.refs -%}
+  <li>
+    {%- if r.url -%}
+      <a href="{{ r.url }}" target="_blank">{{ r.title }}</a>
+    {%- else -%}
+      {{ r.title }}
+    {%- endif -%}
+    {%- if r.author -%}
+      by {{ r.author.name }}
+    {%- endif -%}
+  </li>
+  {% endfor -%}
+  </ul>
+</section>
+
+<section>
+  <!-- 補足情報など -->
+  {{ include.post.content }}
+</section>

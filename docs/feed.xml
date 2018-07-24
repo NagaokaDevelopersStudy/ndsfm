@@ -20,28 +20,7 @@
       <pubDate>{{ p.date | date: '%Y-%m-%d' }}</pubDate>
       <enclosure url="https://storage.googleapis.com/ndsfm/ndsfm_{{ p.title }}.mp3" length="{{ p.audio.length }}" type="audio/mp3" />
       <title>{{ p.subject }}</title>
-      <description><![CDATA[
-  <section class="description">
-    {{ page.description }}
-  </section>
-  <section class="refs">
-    <h4>参照</h4>
-    <ul>
-    {% for r in page.refs %}
-    <li>
-      {% if r.url %}
-        <a href="{{ r.url }}" target="_blank">{{ r.title }}</a>
-      {% else %}
-        {{ r.title }}
-      {% endif %}
-      {% if r.author %}
-        by {{ r.author.name }}
-      {% endif %}
-    </li>
-    {% endfor %}
-    </ul>
-  </section>
-  ]]></description>
+      <description><![CDATA[{% include post_text.html post=p %}]]></description>
       <itunes:summary>{{ p.summary }}</itunes:summary>
       <itunes:duration>{{ p.audio.duration }}</itunes:duration>
     </item>
