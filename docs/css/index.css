@@ -11,6 +11,8 @@ header a.top_link {
 header h1 {
   margin: 0px;
   font-family: 'Shrikhand', cursive;
+  flex-grow: 1;
+  flex-shrink 0;
 }
 
 header h2 {
@@ -26,8 +28,28 @@ header .content {
   background-size: auto 80px;
 }
 
+header .title {
+  display: flex;
+  align-items: stretch;
+}
+
+header .subscribe {
+  width: 100px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: stretch;
+}
+
+header .subscribe a {
+  display: flex;
+  align-items: baseline;
+  font-size: 10pt;
+  line-height: 2em;
+}
+
 header img.feed {
-  height: 0.9em;
+  height: 28px;
 }
 
 ul.podcasts {
