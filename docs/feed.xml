@@ -4,16 +4,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml"/>
 
     <title>{{ site.title }}</title>
     <link>{{ site.url }}{{ site.baseurl }}</link>
     <description>{{ site.description }}</description>
     <language>JA</language>
+    <copyright>NDSFM 2018</copyright>
     <image>
       <url>{{ site.url }}{{ site.baseurl }}/artwork.png</url>
     </image>
+		<itunes:author>Shintaro Abe</itunes:author>
+		<itunes:owner>
+			<itunes:name>Shintaro Abe</itunes:name>
+			<itunes:email>nfsfm@dictav.net</itunes:email>
+		</itunes:owner>
+    <itunes:category text="Technology"/>
+    <itunes:keywords>
+      nds,ndsfm,nagaoka,長岡,niigata,新潟,tech,it,programing,プログラミング,server,サーバー,backend,バックエンド,fontend,フロントエンド
+    </itunes:keywords>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:category text="Games &amp; Hobbies"/>
 
     {% for p in site.posts %}
     <item>
