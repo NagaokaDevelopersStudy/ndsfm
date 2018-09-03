@@ -8,6 +8,8 @@ description: "NDS 界隈の人々が語らうポッドキャストです"
 #relative_permalinks: false
 #url: https://www.m0mentum.co.jp
 
+timezone: Asia/Tokyo
+
 # jekyll-seo-tag
 # https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 logo: "/artwork.png"
