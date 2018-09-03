@@ -10,3 +10,25 @@ body {
   max-width: 800px;
 }
 
+img.twitter {
+  vertical-align: middle;
+  height: 2em;
+}
+img.discord {
+  vertical-align: middle;
+  height: 2em;
+}
+
+div.present {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+div.present div.text {
+  max-width: 650px;
+}
+
+div.present div iframe {
+  margin: auto;
+}
