@@ -23,9 +23,17 @@ layout: default
 
 <div class="content">
   <section class="podcast">
-    <audio controls preload="none">
+    <audio id="player" controls preload="none">
       <source src="https://storage.googleapis.com/ndsfm/ndsfm_{{page.title}}.mp3" type="audio/mp3">
     </audio>
+    <div>
+      <button id="rate1.0">x1.0</button>
+      <button id="rate1.5">x1.5</button>
+      <button id="rate1.75">x1.75</button>
+      <button id="rate2.0">x2.0</button>
+      <button id="rate10">x10</button>
+    </div>
+    <script src="js/player.js"></script>
   </section>
 
   {% include post_text.html post=page %}
