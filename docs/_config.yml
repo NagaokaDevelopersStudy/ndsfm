@@ -10,6 +10,12 @@ description: "NDS 界隈の人々が語らうポッドキャストです"
 
 timezone: Asia/Tokyo
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/artwork.png" # for jekyll-seo-tag
+
 # jekyll-seo-tag
 # https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 logo: "/artwork.png"
