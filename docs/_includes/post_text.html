@@ -1,9 +1,9 @@
 <section class="description">
-  {{ include.post.content }}
+  {{ include.post.content | markdownify }}
 </section>
   
 <section class="refs">
-  <h4>🔗リンク</h4>
+<h4>🔗リンク</h4>
   <ul>
   {% for r in include.post.refs -%}
   <li>
@@ -19,3 +19,23 @@
   {% endfor -%}
   </ul>
 </section>
+
+{%- if include.post.gift -%}
+<h4>🎁プレゼント</h4>
+<div class="present">
+<div class="text">
+
+<p>
+{{ include.post.gift.message }}
+</p>
+
+<p>
+応募方法は簡単です。<a href="//twitter.com/search?q=%23ndsfm&f=tweets"><img class="twitter" src="img/twitter.png">#ndsfm</a> 、または <a href="//discord.gg/TvAWxWq"><img class="discord" src="img/discord.png" alt="discord"></a>まで<b>感想</b> に「{{ include.post.gift.title }}欲しい」と添えてコメントをください。
+当選者には<a href="//twitter.com/dictav">@dictav</a>からDMを送らせていただきます。
+</p>
+</div>
+<div class="item">
+  <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="{{ include.post.gift.link }}"></iframe>
+</div>
+</div>
+{%- endif -%}
